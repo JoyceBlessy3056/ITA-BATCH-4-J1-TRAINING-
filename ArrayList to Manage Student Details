@@ -1,0 +1,50 @@
+import java.util.*;
+
+class Student {
+    int rollNo;
+    String name;
+    long phoneNumber;
+
+    Student(int rollNo, String name, long phoneNumber) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Student> list = new ArrayList<>();
+
+        System.out.print("Enter number of students: ");
+        int n = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Student " + (i + 1));
+
+            System.out.print("Enter Roll Number: ");
+            int roll = sc.nextInt();
+            sc.nextLine();
+
+            System.out.print("Enter Name: ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter Phone Number: ");
+            long phone = sc.nextLong();
+            sc.nextLine();
+
+            list.add(new Student(roll, name, phone));
+        }
+
+        System.out.println("\nStudent Details:");
+        for (Student s : list) {
+            System.out.println("Roll No: " + s.rollNo);
+            System.out.println("Name: " + s.name);
+            System.out.println("Phone Number: " + s.phoneNumber);
+            System.out.println();
+        }
+    }
+}
