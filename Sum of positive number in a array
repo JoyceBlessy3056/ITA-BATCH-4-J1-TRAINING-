@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int sum=0;
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]>0){
+            sum+=arr[i];
+            }
+        }
+        System.out.print("The sum of the positive number in a array = "+sum);
+    }
+}
