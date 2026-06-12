@@ -1,0 +1,80 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter rating for order 1");
+        int a = sc.nextInt();
+        while (a < 1|| a > 5) {
+            System.out.println("Invalid rating.Please exter rating from 1 t0 5");
+             a=sc.nextInt();
+        }
+
+        System.out.println("Enter rating for order 2");
+        int b = sc.nextInt();
+        while(b < 1 || b > 5) {
+            System.out.println("Invalid rating.Please exter rating from 1 t0 5");
+            b=sc.nextInt();
+        }
+
+        System.out.println("Enter rating for order 3");
+        int c = sc.nextInt();
+        while(c < 1 || c > 5) {
+            System.out.println("Invalid rating.Please exter rating from 1 t0 5");
+            c=sc.nextInt();
+        }
+
+        System.out.println("Enter rating for order 4");
+        int d = sc.nextInt();
+        while(d < 1 || d > 5) {
+            System.out.println("Invalid rating.Please exter rating from 1 t0 5");
+           d=sc.nextInt();
+            System.out.println("Rating:"+d);
+        }
+
+        System.out.println("Enter rating for order 5");
+        int e = sc.nextInt();
+        while(e < 0 || e > 5) {
+            System.out.println("Invalid rating.Please exter rating from 1 t0 5");
+            e=sc.nextInt();
+        }
+
+        int sum = a + b + c + d + e;
+        double avg = sum / 5.0;
+
+        if (avg > 3.8) {
+            System.out.println("You got offer");
+        } else {
+            System.out.println("No offer");
+        }
+       System.out.println("Track your order:");
+System.out.println("Enter a number (1-5):");
+int n = sc.nextInt();
+
+switch (n) {
+    case 1:
+        System.out.println("Preparing your order.");
+        break;
+
+    case 2:
+        System.out.println("Order is ready.");
+        break;
+
+    case 3:
+        System.out.println("Out for delivery.");
+        break;
+
+    case 4:
+        System.out.println("Reached your house nearby.");
+        break;
+
+    case 5:
+        System.out.println("Delivered!");
+        break;
+
+    default:
+        System.out.println("Invalid status number.");
+}
+}
+}
