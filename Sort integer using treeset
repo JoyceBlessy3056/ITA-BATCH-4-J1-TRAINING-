@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        TreeSet<Integer> set = new TreeSet<>();
+
+        set.add(5);
+        set.add(2);
+        set.add(9);
+        set.add(1);
+        set.add(5); // duplicate (ignored)
+
+        System.out.println("Sorted Set: " + set);
+    }
+}
