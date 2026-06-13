@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the no of liters to fill the tank");
+        float L = sc.nextFloat();
+
+        System.out.println("Enter the distance covered");
+        float D = sc.nextFloat();
+
+        if(L<= 0 || D <= 0)
+        {
+            System.out.println("Invalid Input");
+        }
+        else
+        {
+            float Lr100km = (L* 100) / D;
+
+            float miles = D* 0.6214f;
+            float gallons = L * 0.2642f;
+            float mpg = miles / gallons;
+
+            System.out.println("Liters/100KM");
+            System.out.printf("%.2f\n", Lr100km);
+
+            System.out.println("Miles/gallons");
+            System.out.printf("%.2f\n", mpg);
+        }
+    }
+}
