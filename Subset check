@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        HashSet<Integer> A = new HashSet<>();
+        HashSet<Integer> B = new HashSet<>();
+
+        A.add(1);
+        A.add(2);
+
+        B.add(1);
+        B.add(2);
+        B.add(3);
+        B.add(4);
+        if (B.containsAll(A)) {
+            System.out.println("A is subset of B");
+        } else {
+            System.out.println("A is NOT subset of B");
+        }
+    }
+}
