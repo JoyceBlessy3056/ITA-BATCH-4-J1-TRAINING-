@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, String> phoneBook = new HashMap<>();
+
+        phoneBook.put("John", "9876543210");
+        phoneBook.put("Mary", "9876541230");
+        phoneBook.put("David", "9876501234");
+
+        System.out.println(phoneBook);
+    }
+}
