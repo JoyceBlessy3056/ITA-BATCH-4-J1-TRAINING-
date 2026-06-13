@@ -1,0 +1,101 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("---FOOD MENU---");
+        System.out.println("Juice / Briyani / Dessert");
+        System.out.print("Enter your choice: ");
+
+        String c = sc.nextLine().toLowerCase();
+
+        System.out.print("How many items do you want to order? ");
+        int n = sc.nextInt();
+
+        int total = 0;
+
+        if (c.equals("juice")) {
+
+            System.out.println("---JUICE MENU---");
+            System.out.println("1. Apple juice Rs 100");
+            System.out.println("2. Mango juice Rs 120");
+            System.out.println("3. Orange juice Rs 80");
+            System.out.println("4. Lemon juice Rs 50");
+            System.out.println("5. Strawberry juice Rs 100");
+
+            for (int i = 1; i <= n; i++) {
+                System.out.print("Enter dish number: ");
+                int choice = sc.nextInt();
+
+                System.out.print("Enter quantity: ");
+                int qty = sc.nextInt();
+
+                switch (choice) {
+                    case 1: total += 100 * qty; break;
+                    case 2: total += 120 * qty; break;
+                    case 3: total += 80 * qty; break;
+                    case 4: total += 50 * qty; break;
+                    case 5: total += 100 * qty; break;
+                    default: System.out.println("Invalid dish number!");
+                }
+            }
+
+        } else if (c.equals("briyani")) {
+
+            System.out.println("---BRIYANI MENU---");
+            System.out.println("1. Plain briyani Rs 110");
+            System.out.println("2. Chicken briyani Rs 210");
+            System.out.println("3. Mutton briyani Rs 250");
+            System.out.println("4. Mushroom briyani Rs 150");
+
+            for (int i = 1; i <= n; i++) {
+                System.out.print("Enter dish number: ");
+                int choice = sc.nextInt();
+
+                System.out.print("Enter quantity: ");
+                int qty = sc.nextInt();
+
+                switch (choice) {
+                    case 1: total += 110 * qty; break;
+                    case 2: total += 210 * qty; break;
+                    case 3: total += 250 * qty; break;
+                    case 4: total += 150 * qty; break;
+                    default: System.out.println("Invalid dish number!");
+                }
+            }
+
+        } else if (c.equals("dessert")) {
+
+            System.out.println("---DESSERT MENU---");
+            System.out.println("1. Chocolate cake Rs 200");
+            System.out.println("2. Triple layer cake Rs 300");
+            System.out.println("3. Chocolate waffle Rs 150");
+            System.out.println("4. Strawberry ice cream Rs 200");
+
+            for (int i = 1; i <= n; i++) {
+                System.out.print("Enter dish number: ");
+                int choice = sc.nextInt();
+
+                System.out.print("Enter quantity: ");
+                int qty = sc.nextInt();
+
+                switch (choice) {
+                    case 1: total += 200 * qty; break;
+                    case 2: total += 300 * qty; break;
+                    case 3: total += 150 * qty; break;
+                    case 4: total += 200 * qty; break;
+                    default: System.out.println("Invalid dish number!");
+                }
+            }
+
+        } else {
+            System.out.println("Food is not available");
+        }
+
+        System.out.println("\nTotal Bill = Rs " + total);
+    }
+}
+
+
+
